@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/newAccount"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/BlueJeans">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/BlueJeans"
+    tools:context=".New_Account">
 
     <EditText
         android:id="@+id/newPassword2"
@@ -98,15 +99,12 @@
         app:backgroundTint="@color/ButtonColour" />
 
     <Button
-        android:id="@+id/cancelBtnSignUp"
+        android:id="@+id/signUpCancBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="159dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
         android:text="@string/cancelBtn"
         app:backgroundTint="@color/Ruby" />
 
