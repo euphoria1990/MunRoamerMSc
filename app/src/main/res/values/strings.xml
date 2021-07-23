@@ -1,3 +1,20 @@
 <resources>
+    //Log In Screen
     <string name="app_name">MunRoamer</string>
+    <string name="emailLoginText">E-Mail</string>
+    <string name="loginPassword">Password</string>
+    <string name="loginHeading">Log In</string>
+    <string name="loginButtonText">Roam</string>
+    <string name="noAccountText">Don\'t have an account?</string>
+    <string name="signUpText">Sign up here</string>
+    <string name="contentDescribeLogo">Logo for MunRoamer.  Mountains Image with MunRoamer text.  Caption \"Explore Adventure\"</string>
+
+    //Sign Up Screen
+    <string name="newFirstName">First Name</string>
+    <string name="newLastName">Last Name</string>
+    <string name="newEmail">Email Address</string>
+    <string name="newPassword">Password</string>
+    <string name="newPassword2">Confirm Password</string>
+    <string name="signMeUpBtn">Sign Me Up!</string>
+    <string name="cancelBtn">Cancel</string>
 </resources>

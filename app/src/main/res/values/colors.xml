@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="BlueJeans">#00A3F5</color>
+    <color name="Charcoal">#404E5C</color>
+    <color name="TeaGreen">#CCF5AC</color>
+    <color name="Ruby">#D81159</color>
+    <color name="EarthYellow">#E0A458</color>
+    <color name="ButtonColour">#fffffe</color>
+
 </resources>

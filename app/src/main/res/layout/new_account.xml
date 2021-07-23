@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/newAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlueJeans">
+
+    <EditText
+        android:id="@+id/newPassword2"
+        android:layout_width="293dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/newPassword1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="59dp"
+        android:background="@color/TeaGreen"
+        android:ems="10"
+        android:hint="@string/newPassword2"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/newPassword1"
+        android:layout_width="293dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/newEmail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="59dp"
+        android:background="@color/TeaGreen"
+        android:ems="10"
+        android:hint="@string/newPassword"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/newEmail"
+        android:layout_width="293dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/newLastName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="59dp"
+        android:background="@color/TeaGreen"
+        android:ems="10"
+        android:hint="@string/newEmail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/newFirstName"
+        android:layout_width="293dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="59dp"
+        android:background="@color/TeaGreen"
+        android:ems="10"
+        android:hint="@string/newFirstName"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/newLastName"
+        android:layout_width="293dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/newFirstName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="59dp"
+        android:background="@color/TeaGreen"
+        android:ems="10"
+        android:hint="@string/newLastName"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/signMeUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newPassword2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="144dp"
+        android:text="@string/signMeUpBtn"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/ButtonColour" />
+
+    <Button
+        android:id="@+id/cancelBtnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="75dp"
+        android:text="@string/cancelBtn"
+        app:backgroundTint="@color/Ruby" />
+
+</RelativeLayout>
