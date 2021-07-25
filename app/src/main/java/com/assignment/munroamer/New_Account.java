@@ -1,6 +1,7 @@
 package com.assignment.munroamer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ public class New_Account extends Activity {
 
     DatabaseHelper db;
     EditText eT1, eT2, eT3, eT4, eT5;
-    Button sgnUpBtn;
+    Button sgnUpBtn,cancBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,8 @@ public class New_Account extends Activity {
         eT5 = (EditText)findViewById(R.id.newPassword2);
 
         sgnUpBtn = (Button)findViewById(R.id.signMeUpBtn);
+        cancBtn = (Button)findViewById(R.id.signUpCancBtn);
+
         sgnUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +69,14 @@ public class New_Account extends Activity {
             }
         });
 
+        cancBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(New_Account.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
+
         //this.setTitle("New Account");
     }
 }
-
