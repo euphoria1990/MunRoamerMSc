@@ -29,25 +29,25 @@ public class New_Account extends Activity {
         sgnUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String str1 = eT1.getText().toString();
-                String str2 = eT2.getText().toString();
-                String str3 = eT3.getText().toString();
-                String str4 = eT4.getText().toString();
-                String str5 = eT5.getText().toString();
+                String firstNam1 = eT1.getText().toString();
+                String lastNam2 = eT2.getText().toString();
+                String eMl3 = eT3.getText().toString();
+                String newPass4 = eT4.getText().toString();
+                String confPass5 = eT5.getText().toString();
 
                 //check if user has entered all required fields
-                if (str1.equals("")|| str2.equals("")|| str3.equals("")|| str4.equals("")|| str5.equals("")){
+                if (firstNam1.equals("")|| lastNam2.equals("")|| eMl3.equals("")|| newPass4.equals("")|| confPass5.equals("")){
                     Toast.makeText(getApplicationContext(), "Please complete all fields", Toast.LENGTH_LONG).show();
                 }
                 else{
                     // check if passwords entered match.
-                    // //If passwords match and the email does not already exist in database - register user.
-                    // //If passwords entered do not match or email entered already exists - inform user of error
+                    // If passwords match and the email does not already exist in database - register user.
+                    // If passwords entered do not match or email entered already exists - inform user of error
 
-                    if (str4.equals(str5)){
-                        Boolean emailChk = db.emailChk(str3);
+                    if (newPass4.equals(confPass5)){
+                        Boolean emailChk = db.emailChk(eMl3);
                         if (emailChk == true){
-                            Boolean insert = db.insert(str3, str4);
+                            Boolean insert = db.insert(eMl3, newPass4);
                             if (insert ==true){
                                 Toast.makeText(getApplicationContext(), "You have registered as a MunRoamie!!", Toast.LENGTH_LONG).show();
                             }
@@ -57,7 +57,7 @@ public class New_Account extends Activity {
                         }
                     }
                     else {
-                        if(!str4.equals(str5)){
+                        if(!newPass4.equals(confPass5)){
                             Toast.makeText(getApplicationContext(),"Passwords entered do not match", Toast.LENGTH_LONG).show();
                         }
                     }
