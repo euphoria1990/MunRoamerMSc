@@ -45,4 +45,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
+
+    //a method to check the email and passwords match on login
+    public Boolean emlPassCheck (String email, String password){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from user where email=? and password=?", new String[]{email,password});
+        if (cursor.getCount()>0) return true;
+        else return false;
+
+    }
 }
