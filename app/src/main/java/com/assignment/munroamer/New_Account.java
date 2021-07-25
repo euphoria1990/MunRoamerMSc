@@ -29,6 +29,9 @@ public class New_Account extends Activity {
         sgnUpBtn = (Button)findViewById(R.id.signMeUpBtn);
         cancBtn = (Button)findViewById(R.id.signUpCancBtn);
 
+
+        //button click to record details entered and "Sign Up" to MunRoamer
+
         sgnUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +72,8 @@ public class New_Account extends Activity {
 
             }
         });
-
+    //Click the cancel button to go back to the login page
+        //if a user is registered and has clicked "Sign Me Up!" then the button will read as "go to log in'
         cancBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
