@@ -15,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table user (email text primary key,password text)");
+        db.execSQL("Create table user (firstName text, lastName text, email text primary key,password text)");
 
     }
 
@@ -26,9 +26,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //a method to insert data entered into database
-    public boolean insert(String email, String password){
+    public boolean insert(String firstName, String lastName, String email, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
+        contentValues.put("firstName",firstName);
+        contentValues.put("lastName",lastName);
         contentValues.put("email", email);
         contentValues.put("password",password);
         long ins = db.insert("user", null, contentValues);
