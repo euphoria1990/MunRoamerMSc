@@ -50,7 +50,7 @@ public class New_Account extends Activity {
                     if (newPass4.equals(confPass5)){
                         Boolean emailChk = db.emailChk(eMl3);
                         if (emailChk == true){
-                            Boolean insert = db.insert(eMl3, newPass4);
+                            Boolean insert = db.insert(firstNam1,lastNam2, eMl3, newPass4);
                             if (insert ==true){
                                 cancBtn.setText("Go to Log In");
                                 Toast.makeText(getApplicationContext(), "You have registered as a MunRoamie!!", Toast.LENGTH_LONG).show();

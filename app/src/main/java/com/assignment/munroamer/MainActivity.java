@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         sgnUp = (TextView)findViewById(R.id.signUpText);
 
         lgn1.setOnClickListener(new View.OnClickListener() {
+
+            //logging in process, check if email and passwords match
             @Override
             public void onClick(View v) {
                 String email = eMl1.getText().toString();
