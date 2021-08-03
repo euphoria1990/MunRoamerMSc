@@ -34,7 +34,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
     private static final String COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
 
-    //Variables
+    //Variable List
     private Boolean mLocationPermissionGranted = false;
     private GoogleMap mMap;
 
