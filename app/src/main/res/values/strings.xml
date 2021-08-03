@@ -17,4 +17,6 @@
     <string name="newPassword2">Confirm Password</string>
     <string name="signMeUpBtn">Sign Me Up!</string>
     <string name="cancelBtn">Cancel</string>
+    <string name="findMunroBtn">Find Munros!</string>
+    <string name="google_map_key">AIzaSyBk_r3bCKF7K_r9yscuE7I5u54WoyYGXWg</string>
 </resources>
