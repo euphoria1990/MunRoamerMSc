@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 String password = passW1.getText().toString();
                 Boolean chkEmailPass = db.emlPassCheck(email, password);
                 if (chkEmailPass == true) {
+                    Intent intent = new Intent(MainActivity.this,Map_Page.class);
+                    startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Login Success!", Toast.LENGTH_LONG).show();
                 }
                 else {
