@@ -2,13 +2,18 @@ package com.assignment.munroamer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,10 +22,17 @@ public class MainActivity extends AppCompatActivity {
     TextView sgnUp;
     DatabaseHelper db;
 
+
+    private static final String TAG = "MainActivity";
+    private static final int ERROR_DIALOG_REQUEST = 9001;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
         db = new DatabaseHelper(this);
         eMl1 = (EditText)findViewById(R.id.emailLogin);
@@ -37,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 String email = eMl1.getText().toString();
                 String password = passW1.getText().toString();
                 Boolean chkEmailPass = db.emlPassCheck(email, password);
-                if (chkEmailPass == true) {
-                    Intent intent = new Intent(MainActivity.this,Map_Page.class);
+                if (chkEmailPass == true && isServicesOK()){
+                    Intent intent = new Intent(MainActivity.this,Map_Activity.class);
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(), "Login Success!", Toast.LENGTH_LONG).show();
                 }
@@ -55,5 +67,39 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
+
+    public boolean isServicesOK(){
+        Log.d(TAG, "isServicesOK: checking google services version");
+
+        int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(MainActivity.this);
+
+        if(available == ConnectionResult.SUCCESS) {
+            //everything is ok and user can make map requests
+            Log.d(TAG, "isServicesOK: Google  Play Services is working");
+            return true;
+        }
+        else if (GoogleApiAvailability.getInstance().isUserResolvableError(available)) {
+            //an error occurred but it can be resolved
+            Log.d(TAG, "isServicesOK: an error occured but we can fix this");
+            //take error that was thrown and Google will show a dialog where we can find a solution to that problem
+            Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(MainActivity.this, available, ERROR_DIALOG_REQUEST);
+            dialog.show();
+        }
+        else{
+            Toast.makeText(this, "You can't make map requests", Toast.LENGTH_LONG).show();
+        }
+        return false;
+
+    }
+
 }
+
+
+
+
+
+
+
