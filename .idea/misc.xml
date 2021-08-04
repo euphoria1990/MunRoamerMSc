@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kimbe/StudioProjects/MunRoamerMSc/app/src/main/res/layout/map_activity_layout.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/white_border.xml" value="0.1" />
         <entry key="app/src/main/res/layout/map_activity_layout.xml" value="0.2833333333333333" />
       </map>
@@ -52,7 +53,7 @@
       </value>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
