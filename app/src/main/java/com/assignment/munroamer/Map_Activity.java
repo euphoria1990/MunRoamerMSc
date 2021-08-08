@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -73,6 +75,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
     //Widgets
     private EditText mSearchText; //search bar in map
     Button searchButton;
+    private ImageView mGps;
 
     //Variable List
     private Boolean mLocationPermissionGranted = false;
@@ -86,6 +89,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.map_activity_layout);
         mSearchText = (EditText) findViewById(R.id.input_search);
         searchButton = (Button) findViewById(R.id.searchMunroBtn);
+        mGps = (ImageView) findViewById(R.id.ic_gps); 
         
         getLocationPermission();
 
@@ -97,9 +101,18 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
        searchButton.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+               
                geolocate();
            }
        });
+       mGps.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Log.d(TAG, "onClick: clicked the gps icon");
+               getDeviceLocation();
+           }
+       });
+        hideSoftKeyboard();
     }
 
 
@@ -158,6 +171,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     }
                 });
+                hideSoftKeyboard();
             }
 
         } catch (SecurityException e){
@@ -169,11 +183,14 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
     private void moveCamera (LatLng latLng, float zoom, String title){
         Log.d(TAG, "moveCamera: moving the camera to lat: " + latLng.latitude + ", lng: " + latLng.longitude);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
-
-        MarkerOptions options = new MarkerOptions()
-                .position(latLng)
-                .title(title);
-        mMap.addMarker(options);
+        
+        if(!title.equals("My Location")){
+            MarkerOptions options = new MarkerOptions()
+                    .position(latLng)
+                    .title(title);
+            mMap.addMarker(options);
+        }
+       hideSoftKeyboard();
     }
     
     //A method to initialise the map
@@ -231,6 +248,10 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
                 }
 
         }
+    }
+
+    private void hideSoftKeyboard(){
+    this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 }
 
