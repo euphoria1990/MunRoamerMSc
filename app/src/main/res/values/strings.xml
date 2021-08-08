@@ -24,5 +24,6 @@
 
     <string name="google_maps_API_key">AIzaSyA3V8mkicrg49fiOIeXL9WbG25jUHMdNws</string>
     <string name="input_search_temp_hint">Enter Address, City or Zip Code</string>
+    <string name="find_munros_btn">Find Munros</string>
 
 </resources>
