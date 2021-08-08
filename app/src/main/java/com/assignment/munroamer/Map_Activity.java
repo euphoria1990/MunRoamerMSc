@@ -9,7 +9,9 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,6 +72,7 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
 
     //Widgets
     private EditText mSearchText; //search bar in map
+    Button searchButton;
 
     //Variable List
     private Boolean mLocationPermissionGranted = false;
@@ -82,28 +85,21 @@ public class Map_Activity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_activity_layout);
         mSearchText = (EditText) findViewById(R.id.input_search);
+        searchButton = (Button) findViewById(R.id.searchMunroBtn);
         
         getLocationPermission();
 
     }
 
-    //Search bar execute
+    //Search button execute
     private void init(){
         Log.d(TAG, "init: initialising ");
-        mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction (TextView textView, int actionId, KeyEvent keyEvent) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH
-                        || actionId == EditorInfo.IME_ACTION_DONE
-                        || keyEvent.getAction() == KeyEvent.ACTION_DOWN
-                        || keyEvent.getAction() == KeyEvent.KEYCODE_ENTER){
-                    //execute message for searching
-                    geolocate();
-            }
-
-                return false;
-            }
-        });
+       searchButton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               geolocate();
+           }
+       });
     }
 
 
