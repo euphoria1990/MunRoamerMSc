@@ -11,24 +11,24 @@
     tools:context=".BeforeRoam">
 
     <TextView
-        android:id="@+id/titleWindow"
+        android:id="@+id/help_titleWindow"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/TeaGreen"
-        android:text="@string/beforeRoamTitle"
+        android:text="@string/helpTitle"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/titleWindow"
+        android:layout_below="@id/help_titleWindow"
         android:background="@color/TeaGreen">
 
         <TextView
-            android:id="@+id/messageWindow"
+            android:id="@+id/help_messageWindow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/before_roam_text" />
+            android:text="@string/helpContent" />
     </ScrollView>
 
 
