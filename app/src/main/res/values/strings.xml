@@ -26,5 +26,6 @@
     <string name="input_search_temp_hint">Enter Address, City or Zip Code</string>
     <string name="find_munros_btn">Find Munros</string>
     <string name="searchMapButon">Search</string>
+    <string name="search">Search</string>
 
 </resources>

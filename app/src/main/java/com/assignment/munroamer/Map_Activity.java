@@ -45,8 +45,11 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
     private GoogleApiClient client;
     private LocationRequest locationRequest;
     private Location lastLocation;
+    private Location mLastLocation;
     private Marker currentLocationMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
+    double latitude, longitude;
+    int PROXIMITY_RADIUS = 100000;
 
 
     @Override
@@ -90,6 +93,9 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onLocationChanged(@NonNull Location location) {
         lastLocation = location;
+        longitude = location.getLongitude();
+        latitude = location.getLatitude();
+
 
         if (currentLocationMarker != null)
         {
@@ -135,33 +141,57 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
         public void onClick(View v)
         {
             //check if user clicked on search button
-            if(v.getId() == R.id.B_search)
-            {
-                EditText tf_location = (EditText)findViewById(R.id.TF_location);
-                String location = tf_location.getText().toString();
-                List<Address> addressList = null;
-                MarkerOptions mo = new MarkerOptions();
+            switch(v.getId()) {
+                case R.id.B_search: {
+                    EditText tf_location = (EditText) findViewById(R.id.TF_location);
+                    String location = tf_location.getText().toString();
+                    List<Address> addressList = null;
+                    MarkerOptions markerOptions = new MarkerOptions();
 
-                //check if user has entered text or not
-                if(! location.equals(""))
-                {
-                    Geocoder geocoder = new Geocoder(this);
-                    try {
-                        addressList = geocoder.getFromLocationName(location, 5);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    //Add marker to the addresses returned
-                    for (int i = 0;i<addressList.size() ; i++)
-                    {
-                        Address myAddress = addressList.get(i);
-                        LatLng latLng = new LatLng(myAddress.getLatitude(), myAddress.getLongitude());
-                        mo.position(latLng);
-                        mMap.addMarker(mo);
-                        mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+                    //check if user has entered text or not
+                    if (!location.equals("")) {
+                        Geocoder geocoder = new Geocoder(this);
+                        try {
+                            addressList = geocoder.getFromLocationName(location, 5);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        //Add marker to the addresses returned
+                        for (int i = 0; i < addressList.size(); i++) {
+                            Address myAddress = addressList.get(i);
+                            LatLng latLng = new LatLng(myAddress.getLatitude(), myAddress.getLongitude());
+                            markerOptions.position(latLng);
+                            mMap.addMarker(markerOptions);
+                            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+                        }
                     }
                 }
+                break;
+                case R.id.B_munros:
+                    mMap.clear();
+                    String munro = "Mountain Peak";
+                    String url = getUrl(latitude, longitude, munro);
+                    Object dataTransfer[] = new Object[2];
+                    dataTransfer[0] = mMap;
+                    dataTransfer[1] = url;
+
+                    GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+                    getNearbyPlacesData.execute(dataTransfer);
+                    Toast.makeText(Map_Activity.this, "Showing nearby Munros", Toast.LENGTH_LONG).show();
+                    break;
             }
+        }
+
+        private String getUrl(double latitude, double longitude, String nearbyPlace)
+        {
+            StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
+            googlePlaceUrl.append("location="+latitude+","+longitude);
+            googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
+            googlePlaceUrl.append("&types="+"mountain peak");
+            googlePlaceUrl.append("&sensor=true");
+            googlePlaceUrl.append("&key="+"AIzaSyByC1QWVz-7QSQ_jpscMZ_aXyq_Uk_2E_c");
+
+            return googlePlaceUrl.toString();
         }
 
 
