@@ -93,7 +93,7 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
     private Location lastlocation;
     private Marker currentLocationmMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
-    int PROXIMITY_RADIUS = 10000;
+    int PROXIMITY_RADIUS = 1000000;
     double latitude,longitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -233,7 +233,7 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
                 break;
             case R.id.B_munros:
                 mMap.clear();
-                String munro = "munro+mountains";
+                String munro = "Munro+Mountains";
                 String url = getUrl(latitude, longitude, munro);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -260,7 +260,7 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
         StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlaceUrl.append("location="+latitude+","+longitude);
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
-        googlePlaceUrl.append("&names="+nearbyPlace);
+        googlePlaceUrl.append("&keyword="+nearbyPlace);
         googlePlaceUrl.append("&sensor=true");
         googlePlaceUrl.append("&key="+getString(R.string.google_places_API_key));
 
