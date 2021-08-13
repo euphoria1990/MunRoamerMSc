@@ -16,7 +16,9 @@
         android:layout_height="50dp"
         android:background="@color/TeaGreen"
         android:text="@string/beforeRoamTitle"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp" />
 
     <ScrollView
         android:layout_width="match_parent"

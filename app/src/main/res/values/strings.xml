@@ -28,9 +28,9 @@
     <string name="search">Search</string>
 
     //BeforeRoam
-    <string name="beforeRoamTitle">Before You Roam</string>
+    <string name="beforeRoamTitle"><b><u>Before You Roam</u></b></string>
 
-    <string name="before_roam_text">Essential equipment<br/>
+    <string name="before_roam_text"><b>Essential equipment</b><br/>
         <br/>
 Warm and waterproof clothing, a map, compass and good navigation skills are essential, and in addition to the standard equipment for country walks, you should also carry:<br/>
         <br/>
@@ -54,7 +54,7 @@ If you are likely to encounter heavy snow or ice, wear a pair of heavy-duty wint
 
 //Help Page
 
-    <string name="helpTitle">About MunRoamer</string>
+    <string name="helpTitle"><b><u>About MunRoamer</u></b></string>
 
     <string name="helpContent">The Munros are the mountains in Scotland over 3000 feet high.<br/>
 
@@ -62,22 +62,22 @@ If you are likely to encounter heavy snow or ice, wear a pair of heavy-duty wint
         <br/>
 •There are 282 Munros<br/>
         <br/>
-•People like to hill walk/hike up to the top of them. When you hit the summit, you’ve 'bagged a Munro'.<br/>
+•People like to hill hike up to the top of them. When you hit the summit, you have bagged a Munro.<br/>
         <br/>
-•The beauty of wanting to bag all 282 of them is that in committing to do so, you open up the opportunity to see an incredible breadth of Scotland’s outstanding and dramatic landscape.<br/>
+•The beauty of wanting to bag all 282 of them is that in committing to do so, you open up the opportunity to see an incredible breadth of Scotlands outstanding and dramatic landscape.<br/>
         <br/>
-•When you’ve bagged all 282 Munros, you’re considered a Munroist.  And that’s when you start getting a lot of knowing nods, kudos and respect.<br/>
+•When you’ve bagged all 282 Munros, you’re considered a Munroist.  And that is when you start getting a lot of knowing nods, kudos and respect.<br/>
         <br/>
         <br/>
-        How To Use MunRoamer<br/>
+        <b>How To Use MunRoamer</b><br/>
         <br/>
         <br/>
         - Navigate through the app using the hamburger menu with the 3 lines at the top of the screen<br/>
         <br/>
-    -Use the MunRoam map to find Munros nearby your location and search for Munros by name like 'Ben Nevis'.<br/>
+    -Use the MunRoam map to find Munros nearby your location and search for Munros by name for example <i>Ben Nevis</i>.<br/>
         <br/>
-    - Get some handy hiking advice by clicking on the 'Before You Roam' option in the menu<br/>
+    - Get some handy hiking advice by clicking on the <i>Before You Roam</i> option in the menu<br/>
         <br/>
-    - Add a diary entry of your ascents once you have bagged a Munro in the 'My Bag' option<br/></string>
+    - Add a diary entry of your ascents once you have bagged a Munro in the <i>My Bag</i> option<br/></string>
 
 </resources>
