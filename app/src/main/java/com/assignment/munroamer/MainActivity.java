@@ -14,6 +14,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+/**
+ * A class that represents the "Login" screen for MunRoamer
+ *
+ * Users can use this page to log in to MunRoamer or be redirected to create a new account
+ *
+ * @author Kirsty Carmichael
+ * @version 0.1 (13.08.21)
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,8 +40,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
+        /**
+         * Constructor for objects of class MainActivity
+         */
         db = new DatabaseHelper(this);
         eMl1 = (EditText)findViewById(R.id.emailLogin);
         passW1 = (EditText)findViewById(R.id.loginPasswordText);
@@ -41,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
         sgnUp = (TextView)findViewById(R.id.signUpText);
 
+
+        /**
+         * A method to allow user to login, it will check if the email and passwords match and if they do they can log on
+         * Users will be prompted if their details to not match the database
+         *
+         * @param v the onClickListener View
+         */
         lgn1.setOnClickListener(new View.OnClickListener() {
 
             //logging in process, check if email and passwords match
@@ -60,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * A method to allow a user to click and be redirected to the sign up details page
+         * @param v the onclickListener View
+         */
         sgnUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * A method to check if the Google Play Services is available.working for the user
+     * @return result of check
+     */
     public boolean isServicesOK(){
         Log.d(TAG, "isServicesOK: checking google services version");
 

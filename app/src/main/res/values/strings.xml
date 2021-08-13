@@ -23,6 +23,7 @@
     //API
 
     <string name="google_maps_API_key">AIzaSyA3V8mkicrg49fiOIeXL9WbG25jUHMdNws</string>
+    <string name="google_places_API_key">AIzaSyByC1QWVz-7QSQ_jpscMZ_aXyq_Uk_2E_c</string>
     <string name="find_munros_btn">Find Munros</string>
     <string name="searchMapButon">Search</string>
     <string name="search">Search</string>

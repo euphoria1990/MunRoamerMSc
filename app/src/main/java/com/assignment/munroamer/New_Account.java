@@ -7,8 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+/**
+ * A class that represents the "New Account" screen for MunRoamer
+ *
+ * Users can use this page to register their details to sign up for an account with MunRoamer
+ *
+ * @author Kirsty Carmichael
+ * @version 0.1 (13.08.21)
+ */
 
-public class New_Account extends Activity {
+public class  New_Account extends Activity {
 
     DatabaseHelper db;
     EditText eT1, eT2, eT3, eT4, eT5;
@@ -18,6 +26,7 @@ public class New_Account extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_account);
+
 
         db = new DatabaseHelper(this);
         eT1 = (EditText)findViewById(R.id.newFirstName);
@@ -29,7 +38,13 @@ public class New_Account extends Activity {
         sgnUpBtn = (Button)findViewById(R.id.signMeUpBtn);
         cancBtn = (Button)findViewById(R.id.signUpCancBtn);
 
+
+
         sgnUpBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * A method to click Sign Up button and add users details to the database
+             * @param v the onClickListener View
+             */
             @Override
             public void onClick(View v) {
                 String firstNam1 = eT1.getText().toString();
@@ -70,7 +85,12 @@ public class New_Account extends Activity {
             }
         });
 
+
         cancBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * A method to allow users to click the cancel button and return to the login page
+             * @param v OnClickListener View
+             */
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(New_Account.this, MainActivity.class);

@@ -25,10 +25,10 @@
     <EditText
         android:id="@+id/emailLogin"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="288dp"
+        android:layout_marginBottom="274dp"
         android:background="@color/TeaGreen"
         android:ems="10"
         android:hint="@string/emailLoginText"
@@ -37,10 +37,10 @@
     <EditText
         android:id="@+id/loginPasswordText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="251dp"
+        android:layout_marginBottom="224dp"
         android:background="@color/TeaGreen"
         android:ems="10"
         android:hint="@string/loginPassword"
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="175dp"
+        android:layout_marginBottom="150dp"
         android:text="@string/loginButtonText"
         android:textColor="@color/black"
         app:backgroundTint="@color/ButtonColour" />
@@ -81,10 +81,10 @@
     <TextView
         android:id="@+id/signUpText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="63dp"
         android:text="@string/signUpText"
         android:textStyle="bold" />
 

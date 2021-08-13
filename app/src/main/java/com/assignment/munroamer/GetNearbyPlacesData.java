@@ -11,13 +11,27 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-
+/**
+ * A class that represents the "Get Nearby places" fucntionality for MunRoamer
+ *
+ * This class uses the Download URL class and Data Parser class to display nearby places for the user
+ *
+ * @author Kirsty Carmichael
+ * @version 0.1 (13.08.21)
+ */
 public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
+
+
 
     String googlePlacesData;
     GoogleMap mMap;
     String url;
 
+    /**
+     * A method to download and read the Url using the GoogleMap objects and the Url objects
+     * @param objects the Object objects
+     * @return googlePlacesData
+     */
     @Override
     protected String doInBackground(Object... objects) {
 
@@ -34,6 +48,10 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
         return googlePlacesData;
     }
 
+    /**
+     * A method to parse the nearby places data once executed
+     * @param s the String
+     */
     @Override
     protected void onPostExecute(String s) {
         List<HashMap<String, String>> nearbyPlaceList = null;
@@ -42,7 +60,10 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
         showNearbyPlaces(nearbyPlaceList);
     }
 
-    //Show all the places in the list
+    /**
+     * A method to show all the places from the list
+     * @param nearbyPlaceList the list of nearby places
+     */
     private void showNearbyPlaces(List<HashMap<String, String>> nearbyPlaceList)
     {
         for (int i=0;i<nearbyPlaceList.size();i++)

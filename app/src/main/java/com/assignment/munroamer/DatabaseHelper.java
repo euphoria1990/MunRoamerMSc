@@ -7,6 +7,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+/**
+ * A class that represents the "Database" for MunRoamer
+ *
+ * This is used to store users login details
+ *
+ * @author Kirsty Carmichael
+ * @version 0.1 (13.08.21)
+ */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(@Nullable Context context) {
@@ -19,13 +27,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * a method to check user exists and drop the table
+     * @param db
+     * @param oldVersion
+     * @param newVersion
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists user");
 
     }
 
-    //a method to insert data entered into database
+    /**
+     * A method to insert data into the database
+     * @param firstName users first name
+     * @param lastName users last name
+     * @param email users email
+     * @param password users password
+     * @return the result
+     */
     public boolean insert(String firstName, String lastName, String email, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -38,7 +59,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
 
-    //a method to check if email exists
+    /**
+     * A method to check if the users email already exists in the database
+     * @param email users email
+     * @return result of check
+     */
     public Boolean emailChk(String email){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select * from user where email=?", new String[]{email});
@@ -48,7 +73,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    //a method to check the email and passwords match on login
+    /**
+     * A method to check if the users email and password match
+     * @param email users email
+     * @param password users password
+     * @return result of check
+     */
     public Boolean emlPassCheck (String email, String password){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from user where email=? and password=?", new String[]{email,password});

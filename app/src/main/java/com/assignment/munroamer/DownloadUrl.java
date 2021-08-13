@@ -1,5 +1,7 @@
 package com.assignment.munroamer;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,40 +10,48 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-//class will retrieve data from a url
+/**
+ * A class that represents the "Download Url" functionality for MunRoamer
+ *
+ * This is so users can view nearby places
+ *
+ * @author Kirsty Carmichael
+ * @version 0.1 (13.08.21)
+ */
+
+
+
+
 public class DownloadUrl {
 
+    /**
+     * a method to read the url provided
+     * @param myUrl the url
+     * @return the data as a result of reading the url
+     * @throws IOException IOException
+     */
     public String readUrl(String myUrl) throws IOException
     {
         String data = "";
-        //to read the url
         InputStream inputStream = null;
         HttpURLConnection urlConnection = null;
 
         try {
-            URL url  = new URL(myUrl);
-            //open the connection
-            urlConnection = (HttpURLConnection) url.openConnection();
-            //connect
+            URL url = new URL(myUrl);
+            urlConnection=(HttpURLConnection) url.openConnection();
             urlConnection.connect();
 
-            //Read data from URL
             inputStream = urlConnection.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
             StringBuffer sb = new StringBuffer();
 
-            //store each line
             String line = "";
-
-            //append it to the string buffer if it is not null
-            while ((line = br.readLine()) != null)
+            while((line = br.readLine()) != null)
             {
                 sb.append(line);
             }
 
-            //converting the String buffer to a string and storing it in the data variable
             data = sb.toString();
-            //close the buffer
             br.close();
 
         } catch (MalformedURLException e) {
@@ -53,6 +63,8 @@ public class DownloadUrl {
             inputStream.close();
             urlConnection.disconnect();
         }
+        Log.d("DownloadURL","Returning data= "+data);
+
         return data;
     }
 }
