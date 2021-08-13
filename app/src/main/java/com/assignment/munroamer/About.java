@@ -5,14 +5,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class BeforeRoam extends AppCompatActivity {
+public class About extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.before_roam_layout);
-        TextView mTitleWindow = (TextView) findViewById(R.id.titleWindow);
-        TextView mMessageWindow = (TextView) findViewById(R.id.messageWindow);
+        setContentView(R.layout.about_munroamer);
+
+        TextView abtTitleWindow = (TextView) findViewById(R.id.help_titleWindow);
+        TextView abtMessageWindow = (TextView) findViewById(R.id.help_messageWindow);
 
 
     }
