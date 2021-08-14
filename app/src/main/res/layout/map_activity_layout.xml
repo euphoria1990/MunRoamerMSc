@@ -2,10 +2,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@color/BlueJeans"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/EarthYellow"
+        >
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:paddingLeft="5dp"
+            android:onClick="ClickMenu"
+            android:src="@drawable/ic_menu">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarTitle"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:text="@string/app_name"
+            android:textAlignment="center">
+
+        </TextView>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,15 +59,17 @@
             <EditText
                 android:id="@+id/TF_location"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1.01"
                 android:ems="10"
+                android:background="@color/white"
                 android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/B_search"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:onClick="onClick"
                 android:text="@string/search" />
 
@@ -53,9 +93,12 @@
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="634dp"
+            android:layout_width="386dp"
+            android:layout_height="579dp"
+            android:layout_gravity="center"
             tools:context=".Map_Activity" />
+    </LinearLayout>
+
     </LinearLayout>
 
 </FrameLayout>

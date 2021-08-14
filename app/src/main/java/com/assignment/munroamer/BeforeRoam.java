@@ -1,6 +1,8 @@
 package com.assignment.munroamer;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,9 +25,22 @@ public class BeforeRoam extends AppCompatActivity {
         /**
          * Constructor for objects of class BeforeRoam
          */
-        TextView mTitleWindow = (TextView) findViewById(R.id.titleWindow);
+
         TextView mMessageWindow = (TextView) findViewById(R.id.messageWindow);
+        TextView title = (TextView) findViewById(R.id.toolbarTitle);
+
+        title.setText("Before You Roam");
 
 
+    }
+
+
+    /**
+     * A method to take the user to the navigation menu
+     * @param v the view
+     */
+    public void ClickMenu1 (View v){
+        Intent intent = new Intent(BeforeRoam.this,Menu.class);
+        startActivity(intent);
     }
 }

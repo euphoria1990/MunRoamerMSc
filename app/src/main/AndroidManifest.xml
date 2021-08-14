@@ -44,6 +44,7 @@
         <activity android:name=".Map_Activity" />
         <activity android:name=".BeforeRoam" />
         <activity android:name=".About" />
+        <activity android:name=".Menu" />
 
 
     </application>

@@ -2,6 +2,7 @@ package com.assignment.munroamer;
 
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -10,6 +11,8 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -86,6 +89,9 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener{
 
+    //Navigation menu
+    ImageView menu;
+
 
     private GoogleMap mMap;
     private GoogleApiClient client;
@@ -99,6 +105,10 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_activity_layout);
+
+        //navigation bar
+        TextView title = (TextView) findViewById(R.id.toolbarTitle);
+        title.setText("MunroMap");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
         {
@@ -320,4 +330,15 @@ public class Map_Activity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
     }
+
+
+    /**
+     * A method to take the user to the navigation menu
+     * @param v the view
+     */
+    public void ClickMenu (View v){
+        Intent intent = new Intent(Map_Activity.this,Menu.class);
+        startActivity(intent);
+    }
+
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,30 +8,53 @@
     android:paddingTop="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    tools:context=".BeforeRoam">
+    tools:context=".About"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/help_titleWindow"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/TeaGreen"
-        android:text="@string/helpTitle"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="34sp" />
+        android:orientation="horizontal"
+        android:background="@color/EarthYellow"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_menu"
+            android:id="@+id/menu_icon"
+            android:paddingLeft="5dp"
+            android:onClick="ClickMenu2">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarTitle"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:text="@string/app_name"
+            android:textAlignment="center">
+
+        </TextView>
+
+    </LinearLayout>
+
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/help_titleWindow"
-        android:background="@color/TeaGreen">
-
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/help_messageWindow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/TeaGreen"
+            android:padding="5dp"
             android:text="@string/helpContent" />
     </ScrollView>
 
 
-</RelativeLayout>
+
+</LinearLayout>
