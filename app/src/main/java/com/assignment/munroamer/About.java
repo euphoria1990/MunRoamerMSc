@@ -1,6 +1,8 @@
 package com.assignment.munroamer;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,9 +27,24 @@ public class About extends AppCompatActivity {
          * Constructor for objects of class About.
          */
 
-        TextView abtTitleWindow = (TextView) findViewById(R.id.help_titleWindow);
+
         TextView abtMessageWindow = (TextView) findViewById(R.id.help_messageWindow);
+
+        TextView title = (TextView) findViewById(R.id.toolbarTitle);
+
+        title.setText("About");
 
 
     }
+
+    /**
+     * A method to take the user to the navigation menu
+     * @param v the view
+     */
+    public void ClickMenu2 (View v){
+        Intent intent = new Intent(About.this,Menu.class);
+        startActivity(intent);
+    }
+
+
 }

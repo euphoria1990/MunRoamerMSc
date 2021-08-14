@@ -31,54 +31,60 @@
     //BeforeRoam
     <string name="beforeRoamTitle"><b><u>Before You Roam</u></b></string>
 
-    <string name="before_roam_text"><b>Essential equipment</b><br/>
+    <string name="before_roam_text"><b>Essential equipment</b><br/>\n
+        <br/>\n
+Warm and waterproof clothing, a map, compass and good navigation skills are essential, and in addition to the standard equipment for country walks, you should also carry:<br/>\n
+        <br/>\n
+- A survival bag - a heavy-duty bag that keeps your body insulated from the cold in an emergency.<br/>\n
+        <br/>\n
+- A torch and spare batteries<br/>\n
+        <br/>\n
+- A whistle (six blasts of a whistle or six flashes of a torch is the international distress signal)<br/>\n
         <br/>
-Warm and waterproof clothing, a map, compass and good navigation skills are essential, and in addition to the standard equipment for country walks, you should also carry:<br/>
+- Additional warm clothing (including hat and gloves)<br/>\n
         <br/>
-- A survival bag - a heavy-duty bag that keeps your body insulated from the cold in an emergency.<br/>
-        <br/>
-- A torch and spare batteries<br/>
-        <br/>
-- A whistle (six blasts of a whistle or six flashes of a torch is the international distress signal)<br/>
-        <br/>
-- Additional warm clothing (including hat and gloves)<br/>
-        <br/>
-- High-energy rations (such as mint cake, chocolate, or dried fruit)<br/>
-        <br/>
+- High-energy rations (such as mint cake, chocolate, or dried fruit)<br/>\n
+        <br/>\n
 - Water purification tablets\n
-        <br/>
-- A first aid kit<br/>
-        <br/>
-- An ice axe and crampons when there is snow or ice on the hills<br/>
-        <br/>
+        <br/>\n
+- A first aid kit<br/>\n
+        <br/>\n
+- An ice axe and crampons when there is snow or ice on the hills<br/>\n
+        <br/>\n
 If you are likely to encounter heavy snow or ice, wear a pair of heavy-duty winter walking boots that can be fitted with crampons (metal spike attachments that give a better grip on icy terrain) and carry an ice axe. It’s worth learning how to use them before setting out on your walk as they can cause, rather than prevent, accidents if not used properly.</string>
 
 //Help Page
 
     <string name="helpTitle"><b><u>About MunRoamer</u></b></string>
 
-    <string name="helpContent">The Munros are the mountains in Scotland over 3000 feet high.<br/>
-
-•A Munro is a mountain in Scotland over 3000ft<br/>
-        <br/>
-•There are 282 Munros<br/>
-        <br/>
-•People like to hill hike up to the top of them. When you hit the summit, you have bagged a Munro.<br/>
-        <br/>
-•The beauty of wanting to bag all 282 of them is that in committing to do so, you open up the opportunity to see an incredible breadth of Scotlands outstanding and dramatic landscape.<br/>
-        <br/>
-•When you’ve bagged all 282 Munros, you’re considered a Munroist.  And that is when you start getting a lot of knowing nods, kudos and respect.<br/>
-        <br/>
-        <br/>
-        <b>How To Use MunRoamer</b><br/>
-        <br/>
-        <br/>
-        - Navigate through the app using the hamburger menu with the 3 lines at the top of the screen<br/>
-        <br/>
-    -Use the MunRoam map to find Munros nearby your location and search for Munros by name for example <i>Ben Nevis</i>.<br/>
-        <br/>
-    - Get some handy hiking advice by clicking on the <i>Before You Roam</i> option in the menu<br/>
-        <br/>
+    <string name="helpContent">The Munros are the mountains in Scotland over 3000 feet high.<br/>\n
+\n
+•A Munro is a mountain in Scotland over 3000ft<br/>\n
+        <br/>\n
+•There are 282 Munros<br/>\n
+        <br/>\n
+•People like to hill hike up to the top of them. When you hit the summit, you have bagged a Munro.<br/>\n
+        <br/>\n
+•The beauty of wanting to bag all 282 of them is that in committing to do so, you open up the opportunity to see an incredible breadth of Scotlands outstanding and dramatic landscape.<br/>\n
+        <br/>\n
+•When you’ve bagged all 282 Munros, you’re considered a Munroist.  And that is when you start getting a lot of knowing nods, kudos and respect.<br/>\n
+        <br/>\n
+        <br/>\n
+        <b>How To Use MunRoamer</b><br/>\n
+        <br/>\n
+        <br/>\n
+        - Navigate through the app using the hamburger menu with the 3 lines at the top of the screen<br/>\n
+        <br/>\n
+    -Use the MunRoam map to find Munros nearby your location and search for Munros by name for example <i>Ben Nevis</i>.<br/>\n
+        <br/>\n
+    - Get some handy hiking advice by clicking on the <i>Before You Roam</i> option in the menu<br/>\n
+        <br/>\n
     - Add a diary entry of your ascents once you have bagged a Munro in the <i>My Bag</i> option<br/></string>
+    <string name="hello_munroamie">Hello MunRoamie!</string>
+    <string name="munroMap">MunroMap</string>
+    <string name="about">About</string>
+    <string name="before_you_roam">Before You Roam</string>
+    <string name="my_bag">My Bag</string>
+    <string name="log_out">Log Out</string>
 
 </resources>
