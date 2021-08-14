@@ -86,5 +86,7 @@ If you are likely to encounter heavy snow or ice, wear a pair of heavy-duty wint
     <string name="before_you_roam">Before You Roam</string>
     <string name="my_bag">My Bag</string>
     <string name="log_out">Log Out</string>
+    <string name="logged_out_confirmed">You have successfully logged out</string>
+    <string name="roam_again">Roam Again</string>
 
 </resources>

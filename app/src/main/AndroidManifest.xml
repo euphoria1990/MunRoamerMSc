@@ -45,6 +45,7 @@
         <activity android:name=".BeforeRoam" />
         <activity android:name=".About" />
         <activity android:name=".Menu" />
+        <activity android:name=".Logged_Out" />
 
 
     </application>
