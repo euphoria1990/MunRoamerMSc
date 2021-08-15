@@ -17,6 +17,8 @@ import androidx.annotation.Nullable;
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+
+    public static final String TABLE_NAME_BAG = "myBag";
     public DatabaseHelper(@Nullable Context context) {
         super(context, "munRoam.db", null, 1);
     }
@@ -24,6 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user (firstName text, lastName text, email text primary key,password text)");
+
 
     }
 
@@ -36,6 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists user");
+
 
     }
 
@@ -86,4 +90,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return false;
 
     }
+
+
 }

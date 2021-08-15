@@ -46,6 +46,8 @@
         <activity android:name=".About" />
         <activity android:name=".Menu" />
         <activity android:name=".Logged_Out" />
+        <activity android:name=".NewBagEntry" />
+        <activity android:name=".MyBag" />
 
 
     </application>

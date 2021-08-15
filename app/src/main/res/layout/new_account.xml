@@ -80,14 +80,15 @@
             android:layout_height="69dp"
             android:text="@string/signMeUpBtn"
             android:textColor="@color/black"
-            app:backgroundTint="@color/ButtonColour" />
+            android:backgroundTint="@color/ButtonColour" />
 
         <Button
             android:id="@+id/signUpCancBtn"
             android:layout_width="wrap_content"
             android:layout_height="69dp"
             android:text="@string/cancelBtn"
-            app:backgroundTint="@color/Ruby" />
+            android:textColor="@color/white"
+            android:backgroundTint="@color/Ruby" />
     </LinearLayout>
 
 
