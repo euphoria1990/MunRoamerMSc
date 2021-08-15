@@ -4,6 +4,14 @@ import junit.framework.TestCase;
 
 public class BagDatabaseHelperTest extends TestCase {
 
+    /**
+     * A class that represents some unit testing for BagDatabaseHelper
+     *
+     *
+     * @author Kirsty Carmichael
+     * @version 0.1 (13.08.21)
+     */
+
     private BagDatabaseHelper db = null;
 
     public void testAddData() {

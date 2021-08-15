@@ -3,6 +3,12 @@ package com.assignment.munroamer;
 import junit.framework.TestCase;
 
 public class DatabaseHelperTest extends TestCase {
+    /**
+     * A class that represents some unit tests for DatabaseHelper class
+     *
+     * @author Kirsty Carmichael
+     * @version 0.1 (13.08.21)
+     */
 
     private DatabaseHelper db = null;
 

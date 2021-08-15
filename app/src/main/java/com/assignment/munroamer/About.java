@@ -23,10 +23,6 @@ public class About extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_munroamer);
 
-        /**
-         * Constructor for objects of class About.
-         */
-
 
         TextView abtMessageWindow = (TextView) findViewById(R.id.help_messageWindow);
 
