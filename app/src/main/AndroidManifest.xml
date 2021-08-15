@@ -48,6 +48,7 @@
         <activity android:name=".Logged_Out" />
         <activity android:name=".NewBagEntry" />
         <activity android:name=".MyBag" />
+        <activity android:name=".Munro_List" />
 
 
     </application>
