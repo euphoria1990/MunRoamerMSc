@@ -87,4 +87,13 @@ public class Menu extends AppCompatActivity {
         Intent intent = new Intent(Menu.this,NewBagEntry.class);
         startActivity(intent);
     }
+    /**
+     * A method to allow the user to log out
+     * @param view the view
+     */
+    public void ClickMunroList(View view){
+
+        Intent intent = new Intent(Menu.this,Munro_List.class);
+        startActivity(intent);
+    }
 }
