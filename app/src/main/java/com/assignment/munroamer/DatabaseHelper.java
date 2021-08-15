@@ -23,6 +23,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, "munRoam.db", null, 1);
     }
 
+    public static String getTableNameBag() {
+        return TABLE_NAME_BAG;
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user (firstName text, lastName text, email text primary key,password text)");
