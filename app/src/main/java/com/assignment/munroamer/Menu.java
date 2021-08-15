@@ -56,7 +56,7 @@ public class Menu extends AppCompatActivity {
      * @param view the view
      */
     public void ClickMyBag(View view){
-        Intent intent = new Intent(Menu.this,Map_Activity.class);
+        Intent intent = new Intent(Menu.this,MyBag.class);
         startActivity(intent);
     }
 
@@ -76,6 +76,15 @@ public class Menu extends AppCompatActivity {
     public void ClickLogOut(View view){
 
         Intent intent = new Intent(Menu.this,Logged_Out.class);
+        startActivity(intent);
+    }
+    /**
+     * A method to allow the user to log out
+     * @param view the view
+     */
+    public void ClickAddBag(View view){
+
+        Intent intent = new Intent(Menu.this,NewBagEntry.class);
         startActivity(intent);
     }
 }

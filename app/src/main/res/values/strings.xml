@@ -88,5 +88,11 @@ If you are likely to encounter heavy snow or ice, wear a pair of heavy-duty wint
     <string name="log_out">Log Out</string>
     <string name="logged_out_confirmed">You have successfully logged out</string>
     <string name="roam_again">Roam Again</string>
+    <string name="add_to_my_bag">Add To My Bag</string>
+    <string name="date_of_ascent">Date of Ascent</string>
+    <string name="name_of_munro_field">Name of Munro</string>
+    <string name="diary_entry">Diary Entry</string>
+    <string name="go_to_bag_btn">Go to Bag</string>
+    <string name="view_bag">View Bag</string>
 
 </resources>

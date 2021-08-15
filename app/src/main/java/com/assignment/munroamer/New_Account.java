@@ -97,7 +97,5 @@ public class  New_Account extends Activity {
                 startActivity(i);
             }
         });
-
-        //this.setTitle("New Account");
     }
 }
