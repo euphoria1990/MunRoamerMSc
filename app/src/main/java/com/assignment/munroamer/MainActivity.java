@@ -76,11 +76,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /**
-         * A method to allow a user to click and be redirected to the sign up details page
-         * @param v the onclickListener View
-         */
+
         sgnUp.setOnClickListener(new View.OnClickListener() {
+            /**
+             * A method to allow a user to click and be redirected to the sign up details page
+             * @param v the onclickListener View
+             */
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,New_Account.class);
